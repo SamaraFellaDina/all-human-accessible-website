@@ -1,0 +1,17 @@
+@font-face {
+    font-family: "ProximaNova";
+    src: url(assets\Fonts\ProximaNova-Regular_2607783814[2260].otf);
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "ProximaNova";
+}
+
+nav {
+    background: black;
+}
