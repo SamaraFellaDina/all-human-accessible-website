@@ -1,17 +1,215 @@
 @font-face {
     font-family: "ProximaNova";
-    src: url(assets\Fonts\ProximaNova-Regular_2607783814[2260].otf);
-}
-*{
-    box-sizing: border-box;
+    src: url(../assets/Fonts/ProximaNova-Regular_2607783814[2260].otf);
+  }
+  
+  body {
+    background-color: rgba(255, 255, 255, 255);
+    display: grid;
+    grid-template-columns: 1fr 3fr 0.5fr 3fr 1fr;
+    grid-template-rows: 0.5fr 0.25fr 0.125fr 0.125fr 0.125fr 0.125fr 0.125fr 0.125fr 1fr 1fr 1fr 1fr;
+    grid-gap: 0.5rem;
+    grid-template-areas:
+      "header header header header header"
+      ". h1 h1 h1 ."
+      ". sec1 sec1 sec1 ."
+      ". sec2 sec2 sec2 ."
+      ". sec3 sec3 sec3 ."
+      ". sec4 sec4 sec4 ."
+      ". div div div ."
+      ". h2 h2 h2 ."
+      ". sec5 sec5 sec5 ."
+      ". sec6 sec6 sec6 ."
+      ". sec7 sec7 sec7 ."
+      ". sec8 sec8 sec8 .";
+    font-family: sans-serif;
     margin: 0;
-    padding: 0;
-}
-
-body {
+  }
+  
+  header {
+    display: flex;
+    width: 100vw;
+    grid-area: header;
+    background: rgba(247, 161, 0, 255);
+  }
+  .funda-logo {
+    width: 8rem;
+    margin-left: 2em;
+  }
+  .navlist-left {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    grid-area: nav;
+  }
+  .navlist-right {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    grid-area: nav;
+    margin-right: 3em;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .navlist-left li,
+  .navlist-right li {
+    display: inline-block;
+    padding: 1em;
+  }
+  .navlist-left a,
+  .navlist-right a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  h1 {
+    display: grid;
+    grid-area: h1;
     font-family: "ProximaNova";
-}
-
-nav {
-    background: black;
-}
+  }
+  
+  li:hover {
+    background: linear-gradient(to right, #a974408a, #4b2b13);
+    border-radius: 2em;
+  }
+  
+  .sec1 {
+    background: rgba(162, 137, 137, 0.093);
+    grid-area: sec1;
+    border: 1px solid black;
+  }
+  
+  section {
+    background: rgba(162, 137, 137, 0.093);
+    border: 1px solid black;
+    border-radius: 0.2em;
+    align-items: center;
+    display: flex;
+  }
+  
+  section p {
+    margin-left: 1em;
+    font-family: "ProximaNova";
+  }
+  
+  .sec2 {
+    grid-area: sec2;
+  }
+  
+  .sec3 {
+    grid-area: sec3;
+  }
+  
+  .sec4 {
+    grid-area: sec4;
+    background: #f7a100;
+    border: 1px solid rgba(0, 0, 0, 0);
+    color: white;
+  }
+  
+  #add {
+    font-weight: 900;
+    position: inherit;
+    font-size: 1em;
+  }
+  
+  div {
+    border: 1px solid black;
+    background: white;
+    border-radius: 0.2em;
+  }
+  
+  hr {
+    grid-area: div;
+    background-color:#f7a100;
+    width: 100%;
+    height: .2em;
+    border-width: inherit;
+  }
+  
+  
+  h2{
+    grid-area: h2;
+    font-family: "ProximaNova";
+    font-size: 1.2em;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+  
+  }
+  
+  
+  #aantal-huizen {
+    color: #3333339d;
+    font-size: 0.8em;
+  }
+  
+  .sec5 {
+    grid-area: sec5;
+  }
+  
+  .blok1 img {
+    border-radius: 10px;
+  }
+  .sec6 {
+    grid-area: sec6;
+  }
+  
+  .sec7 {
+    grid-area: sec7;
+  }
+  
+  .sec8 {
+    grid-area: sec8;
+  }
+  
+  section:hover {
+    background: #f7a100;
+    font-weight: 600;
+    border: 1px solid rgba(241, 0, 0, 0);
+    color: white;
+    box-shadow: 0.1em 0.1em 0.3em rgba(0, 0, 0, 0.199);
+    transition-duration: 300ms;
+    transition-delay: 50ms;
+  }
+  
+  section:not(:hover) {
+    transition-duration: 200ms;
+  }
+  
+  .sec4:hover {
+    background: #0071b3;
+    color: white;
+  }
+  
+  footer {
+    background: rgb(147, 49, 49);
+    color: white;
+    grid-area: footer;
+  }
+  
+  @media (min-width: 1125px) {
+    body {
+      background-color: rgba(255, 255, 255, 255);
+      display: grid;
+      grid-template-columns: 2fr 3fr 0.5fr 3fr 2fr;
+      grid-template-rows: 0.5fr 0.25fr 0.25fr 0.25fr 0fr 0.25fr 1fr 1fr;
+      grid-gap: 0.5rem;
+      grid-template-areas:
+        "header header header header header"
+        ". h1 h1 . ."
+        ". sec1 . sec2 ."
+        ". sec3 . sec4 ."
+        ". div div div ."
+        ". h2 h2 h2 ."
+        ". sec5 . sec7 ."
+        ". sec6 . sec8 .";
+      font-family: sans-serif;
+      margin: 0;
+    }
+  }
+  
+  
